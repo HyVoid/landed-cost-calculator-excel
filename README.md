@@ -1,6 +1,8 @@
 [ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Landed Cost Calculation Benchmark & Supply Chain Reconciliation Excel Toolkit
+<img width="1518" height="860" alt="image" src="https://github.com/user-attachments/assets/e6c4d633-0392-45bf-b6c4-7038c97a7351" />
+
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%2B%20Excel-217346.svg)
@@ -253,34 +255,25 @@ Instead of a vague *"The API calculation is wrong,"* this template generates an 
 
 ## The Business Logic & Methodology
 
-### The Core Business Problem
-Most supply chain networks and enterprise ERP systems treat landed cost as a simple arithmetic exercise—taking a consolidated freight bill and dividing it across imported units. However, landed cost is fundamentally a **strategic cost accounting decision**. 
+Landed cost calculation is not just about adding purchase prices, freight, duties, and handling charges together. The real challenge is allocating shared import costs across multiple SKUs accurately enough to support product pricing, gross margin analysis, and inventory valuation.
 
-When third-party logistics (3PL) APIs or black-box SaaS platforms output a final SKU cost, they obscure the underlying allocation logic. If heavy, low-value items share a shipping container with light, high-value items, applying the wrong allocation basis (e.g., distributing ocean freight by Commercial Value instead of Volume/CBM) severely distorts your unit economics. This method opacity leads to underpriced heavy goods, overpriced lightweight goods, and systemic margin erosion that traditional invoice auditing cannot detect.
+The **Landed Cost Calculation Benchmark & Reconciliation Toolkit** uses an independent benchmark, cost allocation analysis, and multi-level variance reconciliation to help importers, finance teams, and software reviewers determine whether landed cost results are both numerically consistent and methodologically sound.
 
-### The Practitioner Methodology
-This toolkit replaces the "black-box trust" model with an **Activity-Based Costing (ABC) and Multi-Tier Reconciliation framework**. 
+The methodology connects four practical business questions:
 
-The methodology is executed through three logical phases to ensure financial compliance and accurate inventory valuation:
+- **Independent Landed Cost Benchmarking:** Establishes a separate practitioner-based calculation as a reference point for evaluating an existing landed cost calculator or Web Service. This helps identify discrepancies that would otherwise remain hidden behind a seemingly reasonable final number.
 
-1. **Decoupled Cost Driver Mapping (The Rule Engine):** 
-   Instead of applying a flat percentage multiplier to all goods, the toolkit mandates that every external cost pool is explicitly mapped to its true physical or financial driver. 
-   * *Ocean & Air Freight* are driven by spatial consumption (Volume/CBM or Dim Weight).
-   * *Drayage & Inland Trucking* are driven by payload constraints (Gross Weight).
-   * *Customs Duties & Tariffs* are driven by statutory tax assessments (Customs Value / FOB).
-   * *Marine Insurance* is driven by financial risk exposure (Commercial Value).
-   
-2. **Independent Shadow Calculation (The Benchmark):** 
-   Before accepting an external API's numbers into your ERP, the workbook generates a localized "shadow" benchmark. It calculates what the exact SKU-level Cost of Goods Sold (COGS) *should* be, strictly adhering to your company's declared accounting policies (e.g., GAAP / ASC 330 / IAS 2).
+- **Multi-Basis Cost Allocation:** Evaluates how shared freight, insurance, handling, and other import costs are distributed using relevant allocation bases, such as gross weight, shipment volume, commercial value, customs value, or quantity. This helps explain why different allocation methods can produce different SKU-level landed costs, even when the shipment's total costs remain unchanged.
 
-3. **Three-Tier Variance Diagnosis (The Audit):**
-   The system does not simply check if the grand total matches the invoice. It forces a reconciliation at three distinct organizational levels:
-   * **Macro (Shipment Level):** Does the aggregate cash outflow match the freight bill?
-   * **Meso (Category Level):** Did the forwarder accurately assess duty vs. freight vs. handling, or are costs bleeding across categories?
-   * **Micro (SKU Level):** Was a specific product burdened with a disproportionate share of the logistics cost, thereby destroying its gross margin?
+- **Multi-Level Variance Analysis:** Compares calculated results at shipment, cost-category, and individual SKU levels. This separates aggregate reconciliation from product-level accuracy, helping reviewers identify whether a discrepancy originates in a particular cost pool, allocation method, or SKU calculation.
 
-### The Strategic Outcome
-By shifting the focus from *arithmetic verification* (do the numbers match?) to *methodological auditing* (was the correct business rule applied?), finance and operations teams regain control over their supply chain data. This logic ensures that consumer pricing strategies and margin analyses are based on the true economic burden of importing a product, rather than a generalized average.
+- **Root-Cause Attribution and Tolerance-Based Review:** Classifies differences into actionable investigation areas, including allocation-basis mismatches, cost inclusion differences, duty assumptions, foreign-exchange conversion, and rounding. Absolute and percentage variance thresholds help prioritize exceptions instead of treating every numerical difference as equally significant.
+
+The business outcome is a more explainable landed cost calculation process. Rather than simply reporting that two results do not match, the toolkit helps determine **where the difference occurs, which assumption may have caused it, and whether it could affect SKU pricing, product profitability, or inventory cost reporting**.
+
+This is particularly valuable for mixed-SKU import shipments, where an apparently correct shipment total can conceal material differences in the cost assigned to individual products.
+
+The toolkit supports analytical review and reconciliation. Final accounting treatment, customs valuation, and duty compliance should still be confirmed against the applicable regulations, source documents, and professional accounting policies.
 
 ---
 
