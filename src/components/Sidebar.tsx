@@ -127,16 +127,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <div className="flex flex-col h-full bg-white text-[#1A1A2E] select-none">
       {/* Brand Header */}
       <div className="p-5 border-b border-[#E5E5E5] flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 min-w-0">
           <div className="w-8 h-8 rounded-[8px] bg-[#051C2C] text-white flex items-center justify-center font-bold text-xs tracking-tight shadow-xs shrink-0">
-            LC
+            TW
           </div>
-          <div>
+          <div className="min-w-0">
+            <div className="text-[10px] font-bold text-[#2251FF] tracking-wider uppercase leading-none mb-1">
+              Theseus Workshop
+            </div>
             <div className="font-heading font-bold text-base text-[#051C2C] leading-none tracking-tight">
               LANDED COST
             </div>
-            <div className="text-[10px] text-[#888888] font-bold tracking-wider uppercase mt-0.5">
-              Benchmark Toolkit
+            <div className="text-[10px] text-[#888888] font-medium tracking-tight uppercase mt-0.5">
+              Benchmark &amp; Reconciliation Toolkit
             </div>
           </div>
         </div>

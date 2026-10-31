@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ caseId }) => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#888888]">
         <div className="flex items-center gap-2 text-left">
           <span className="text-[10px] uppercase font-bold tracking-wider text-[#051C2C]">
-            LANDED COST BENCHMARK • {caseId}
+            THESEUS WORKSHOP • LANDED COST BENCHMARK • {caseId}
           </span>
         </div>
 

@@ -92,7 +92,10 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
         </button>
 
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[10px] font-bold tracking-wider text-[#051C2C] bg-[#F5F5F2] border border-[#E5E5E5] px-2 py-0.5 rounded">
+              Theseus Workshop
+            </span>
             <span className="text-[10px] font-bold uppercase tracking-wider text-[#2251FF] bg-[#2251FF]/10 px-2 py-0.5 rounded">
               {currentInfo.layer}
             </span>
@@ -101,7 +104,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               Shipment: {params.shipmentId}
             </span>
           </div>
-          <h2 className="text-base sm:text-lg font-bold text-[#051C2C] truncate tracking-tight">
+          <h2 className="text-base sm:text-lg font-bold text-[#051C2C] truncate tracking-tight mt-0.5">
             {currentInfo.title}
           </h2>
         </div>

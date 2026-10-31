@@ -1,6 +1,6 @@
 {
-  "name": "Landed Cost Calculation Benchmark & Reconciliation Toolkit",
-  "description": "Institutional landed cost benchmark engine, multi-tier reconciliation, and variance attribution toolkit.",
+  "name": "Theseus Workshop - Landed Cost Calculation Benchmark & Reconciliation Toolkit",
+  "description": "Theseus Workshop institutional landed cost calculation benchmark engine, multi-tier reconciliation, and variance attribution toolkit.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
